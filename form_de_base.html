@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+	<title>Teste CSS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="base.css">
+</head>
+<body>
+	<div id="page">
+		<header>
+			<h1>Base CSS</h1>
+			<p>Mon framework CSS pour les projets IFA, because i'm too lazy</p>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="teste_de_base.html">Grid</a></li>
+				<li><a href="texte_de_base.html">Simple</a></li>
+				<li><a href="form_de_base.html">Formulaire</a></li>
+				<li><a href="table_de_base.html">Tableau</a></li>
+				<li><a href="Lisez-Moi.html">Comment l'utiliser</a></li>
+			</ul>
+		</nav>
+		<main>
+			<form action="" method="post">
+				<fieldset>
+					<legend>Légende</legend>
+
+					<label for="montexte">Mon texte : </label>
+					<input type="text" name="montexte" value="" id="montexte"><br>
+
+					<label for="mongrandtexte">Mon grand texte : <br>
+					<textarea name="mongrandtexte" id="mongrandtexte"></textarea><br>
+
+					<label for="check">check : </label>
+					<input type="checkbox" name="check[]" value="1" id="check">
+					<input type="checkbox" name="check[]" value="2"><br>
+
+					<label for="radio">radio : </label>
+					<input type="radio" name="radio" value="1" id="radio">
+					<input type="radio" name="radio" value="2"><br>
+					
+					<label for="selec">selec : </label>
+					<select id="selec" name="selec">
+						<option value="op1">Option #1</option>
+						<option value="op2">Option #2</option>
+						<option value="op42">Option #42</option>
+					</select><br>
+
+					<input type="submit" value="Envoyer" name="submit">
+				</fieldset>
+			</form>
+			<p class="alert">Une erreure est survenue, voulez-vous la combattre ?</p>
+		</main>
+		<footer>
+			Base CSS &copy; 2018
+		</footer>
+	</div>
+</body>
+</html>

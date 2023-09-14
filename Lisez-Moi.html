@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<title>Teste CSS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="base.css">
+</head>
+<body>
+	<div id="page">
+		<header>
+			<h1>Base CSS</h1>
+			<p>Mon framework CSS pour les projets IFA, because i'm too lazy</p>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="teste_de_base.html">Grid</a></li>
+				<li><a href="texte_de_base.html">Simple</a></li>
+				<li><a href="form_de_base.html">Formulaire</a></li>
+				<li><a href="table_de_base.html">Tableau</a></li>
+				<li><a href="Lisez-Moi.html">Comment l'utiliser</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h3>Comment utiliser Base CSS</h3>
+			<p>Base CSS n'est pas un framework, mais vraiment une base de travail qui redéfinie le CSS des balises HTML les plus courantes. Les couleurs sont loin d'être séduisante, à vous de les modifiers. Aucune class ne contient l'attribue <code>!important</code>. Il faut un <code>&lt;meta name="viewport" &hellip;</code> et un <code>&lt;link rel="&hellip;</code> qui importe <code>base.css</code>. Pour reste reportez-vous au code HTML suivant :</p>
+			<pre>&lt;!doctype html>
+&lt;html lang="fr">
+&lt;head>
+	&lt;title>The Project&lt;/title>
+	&lt;meta charset="UTF-8">
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+	&lt;link rel="stylesheet" type="text/css" href="base.css">
+&lt;/head>
+&lt;body>
+	&lt;div id="page">
+		&lt;header>
+			&lt;h1>The Project&lt;/h1>
+			&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>
+		&lt;/header>
+		&lt;nav>
+			&lt;ul>
+				&lt;li>&lt;a href="home.html">Home&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="project.html">The Project&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="about.html">About&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/nav>
+		&lt;main>
+			&lt;h3>The Project&lt;/h3>
+			&lt;p>Mauris aliquam ullamcorper felis, vitae blandit risus pretium id. 
+			Praesent condimentum sapien sed semper bibendum. Quisque a erat nec urna fringilla 
+			dapibus quis fringilla dolor. Fusce tempor ornare dolor eget venenatis. Sed ut 
+			eros quis nibh pretium euismod. Nam luctus vehicula elit ut congue. Sed tempor, 
+			purus sed vestibulum sagittis, eros nisi ullamcorper ante, 
+			a scelerisque enim felis id libero.&lt;/p>
+		&lt;/main>
+		&lt;footer>
+			The Project &copy; 2018
+		&lt;/footer>
+	&lt;/div>
+&lt;/body>
+&lt;/html></pre>
+			<p>Englobez tous le code de votre <code>body</code> dans une boite <code>&lt;div id="page"></code>. C'est la seule condition pour une utilisation simple de ce CSS. Si vous souhaitez utilisez un <a href="teste_de_base.html">Grid</a>, il faudra utiliser des balises <code>&lt;articles></code> dans la balise <code>&lt;main class="panneau"></code> en n'oubliant pas la class panneau.</p>
+			<p>Pour les tableaux il y a que 2 class à connaîtres, <code>&lt;tbody class="bande"></code> qui mettra 1 ligne sur 2 en évidence avec un fond un peu plus foncé et <code>&lt;td class="numerique"></code> à appliquer sur les cellules contenant des données de type numérique.</p>
+			<h3>Changer les couleurs</h3>
+			<p>Les valeurs définient dans <code>:root</code> sont des variables CSS. Pour utiliser une variables CSS il faut utiliser la fonction <code>var()</code> et lui fournir en paramètre le nom complet de la variables. Mais pour une utilisation simple vous pouvez juste modifier les valeurs dans <code>:root</code>.</p>
+			<ul>
+				<li><code>--fond-*</code> définie les couleurs de fond (background);</li>
+				<li><code>--peaulisse-*</code> définie les polices de caractères;</li>
+				<li><code>--texte-*</code> définie les couleurs des textes;</li>
+				<li><code>--lien-*</code> définie les couleurs des liens textuels.</li>
+			</ul>
+			<pre>:root {
+	--blanc: #ffffff;
+	--cendre: #9999b3;
+	--antracite: #494963;
+	--noir: #292943;
+	--alert: #ff3300;
+
+	--fond-entete: #00cca3;
+	--fond-page1: #e3e3f6;
+	--fond-page2: #eeeeee;
+	--fond-sombre: #d3d3e6;
+	--fond-claire: #efefff;
+
+	--peaulisse-normale: Times New Roman, Georgia, serif;
+	--peaulisse-titre: Arial, Helvetica, sans-serif;
+	--peaulisse-technique: monospace;
+
+	--texte-titre: #5b2e9e;
+	--texte-normale:#292943;
+	--texte-effacer: #604785;
+	--texte-demarquer: #494953;
+
+	--lien-menu: #5b2e9e;
+	--lien-menu-survoler: #666699;
+	--lien: #5b2e9e;
+	--lien-survoler: #a3a3c6;
+}
+
+/* EXEMPLE */
+p {
+	color: var(--texte-normale);
+}</pre>
+		</main>
+		<footer>
+			Base CSS &copy; 2018
+		</footer>
+	</div>
+</body>
+</html>
